@@ -1,0 +1,12 @@
+{
+  "/Volumes/Work/Dev/DriveInspector/DriveInspector/AppDelegate.swift" : {
+    "abi-baseline-json" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector.abi.json",
+    "const-values" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.d",
+    "diagnostics" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.dia",
+    "objc-header" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-Swift.h",
+    "swiftdoc" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector.swiftdoc",
+    "swiftmodule" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector.swiftmodule",
+    "swiftsourceinfo" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector.swiftsourceinfo"
+  }
+}

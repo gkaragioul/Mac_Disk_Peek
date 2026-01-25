@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>2052DFF8-CCD3-409E-9340-4C5329A05FA7</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2052DFF8-CCD3-409E-9340-4C5329A05FA7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>45</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DriveInspector project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DriveInspector</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project DriveInspector with scheme DriveInspector and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>790930975.74338603</real>
+			<key>timeStoppedRecording</key>
+			<real>790930982.32517302</real>
+			<key>title</key>
+			<string>Building project DriveInspector with scheme DriveInspector and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>2052DFF8-CCD3-409E-9340-4C5329A05FA7</string>
+		</dict>
+		<key>7F3E0BF9-132D-46A7-ACCB-074EF4265E9F</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7F3E0BF9-132D-46A7-ACCB-074EF4265E9F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>45</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DriveInspector project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DriveInspector</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project DriveInspector with scheme DriveInspector and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>790930840.75368202</real>
+			<key>timeStoppedRecording</key>
+			<real>790930858.159549</real>
+			<key>title</key>
+			<string>Building project DriveInspector with scheme DriveInspector and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>7F3E0BF9-132D-46A7-ACCB-074EF4265E9F</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

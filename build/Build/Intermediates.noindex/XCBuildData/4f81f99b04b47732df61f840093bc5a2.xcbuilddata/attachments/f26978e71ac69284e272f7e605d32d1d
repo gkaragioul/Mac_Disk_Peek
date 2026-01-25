@@ -1,0 +1,36 @@
+{
+  "" : {
+    "const-values" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.d",
+    "diagnostics" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.dia",
+    "emit-module-dependencies" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary-emit-module.dia",
+    "pch" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DriveInspector-primary.swiftdeps"
+  },
+  "/Volumes/Work/Dev/DriveInspector/DriveInspector/AppDelegate.swift" : {
+    "index-unit-output-path" : "/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Volumes/Work/Dev/DriveInspector/DriveInspector/DiskMonitor.swift" : {
+    "index-unit-output-path" : "/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DiskMonitor.o",
+    "llvm-bc" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DiskMonitor.bc",
+    "object" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DiskMonitor.o"
+  },
+  "/Volumes/Work/Dev/DriveInspector/DriveInspector/DiskSpaceView.swift" : {
+    "index-unit-output-path" : "/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DiskSpaceView.o",
+    "llvm-bc" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DiskSpaceView.bc",
+    "object" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/DiskSpaceView.o"
+  },
+  "/Volumes/Work/Dev/DriveInspector/DriveInspector/main.swift" : {
+    "index-unit-output-path" : "/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/main.o",
+    "llvm-bc" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/main.bc",
+    "object" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/main.o"
+  },
+  "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Volumes/Work/Dev/DriveInspector/build/Build/Intermediates.noindex/DriveInspector.build/Release/DriveInspector.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}
