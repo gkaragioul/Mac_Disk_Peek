@@ -12,11 +12,14 @@ struct DiskInfo {
     
     var usagePercentage: Double {
         guard totalCapacity > 0 else { return 0 }
-        return Double(usedSpace) / Double(totalCapacity)
+        let clampedUsedSpace = min(max(usedSpace, 0), totalCapacity)
+        return Double(clampedUsedSpace) / Double(totalCapacity)
     }
     
     var freePercentage: Double {
-        return 1.0 - usagePercentage
+        guard totalCapacity > 0 else { return 0 }
+        let clampedFreeSpace = min(max(freeSpace, 0), totalCapacity)
+        return Double(clampedFreeSpace) / Double(totalCapacity)
     }
 }
 
@@ -73,7 +76,7 @@ class DiskMonitor: NSObject {
                     // while physical space is still available.
                     let rawFree = Int64(resourceValues.volumeAvailableCapacity ?? 0)
                     let importantFree = resourceValues.volumeAvailableCapacityForImportantUsage ?? 0
-                    let freeSpace = max(rawFree, importantFree)
+                    let freeSpace = max(0, min(Int64(totalCapacity), max(rawFree, importantFree)))
                     
                     // Filter logic:
                     let isInternal = resourceValues.volumeIsInternal ?? false
@@ -96,12 +99,12 @@ class DiskMonitor: NSObject {
                         continue
                     }
                     
-                    let usedSpace = Int64(totalCapacity) - Int64(freeSpace)
+                    let usedSpace = Int64(totalCapacity) - freeSpace
                     let diskInfo = DiskInfo(
                         name: name,
                         path: volumeURL,
                         totalCapacity: Int64(totalCapacity),
-                        freeSpace: Int64(freeSpace),
+                        freeSpace: freeSpace,
                         usedSpace: usedSpace,
                         isExternal: !isInternal,
                         fileSystem: resourceValues.volumeTypeName ?? "Unknown"
@@ -129,7 +132,14 @@ class DiskMonitor: NSObject {
             
             DispatchQueue.main.async {
                 if currentDisks.count != self.lastDisks.count || 
-                   !currentDisks.elementsEqual(self.lastDisks, by: { $0.usedSpace == $1.usedSpace && $0.name == $1.name }) {
+                   !currentDisks.elementsEqual(self.lastDisks, by: { lhs, rhs in
+                       lhs.path == rhs.path &&
+                       lhs.name == rhs.name &&
+                       lhs.totalCapacity == rhs.totalCapacity &&
+                       lhs.freeSpace == rhs.freeSpace &&
+                       lhs.usedSpace == rhs.usedSpace &&
+                       lhs.isExternal == rhs.isExternal
+                   }) {
                     self.lastDisks = currentDisks
                     NotificationCenter.default.post(name: .diskSpaceDidChange, object: nil)
                 }
