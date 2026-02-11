@@ -94,19 +94,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func updateStatusBarIcon() {
         let disks = diskMonitor.getAllDisks()
+        let startupPath = URL(fileURLWithPath: "/").standardizedFileURL.path
         
-        // Target the internal drive for the menu bar percentage
-        if let internalDisk = disks.first(where: { !$0.isExternal }) {
-            statusItem.button?.title = String(format: "💾 %.0f%%", internalDisk.usagePercentage * 100)
+        // Target the startup disk first; fall back to the first internal disk if needed.
+        if let startupDisk = disks.first(where: { $0.path.standardizedFileURL.path == startupPath }) {
+            statusItem.button?.title = String(format: "💾 %.0f%%", startupDisk.freePercentage * 100)
             return
         }
         
-        // Fallback to aggregate if for some reason no internal disk is found
-        let totalUsed = disks.reduce(0) { $0 + $1.usedSpace }
+        if let internalDisk = disks.first(where: { !$0.isExternal }) {
+            statusItem.button?.title = String(format: "💾 %.0f%%", internalDisk.freePercentage * 100)
+            return
+        }
+        
+        // Fallback to aggregate free percentage if no internal or startup disk is found.
+        let totalFree = disks.reduce(0) { $0 + $1.freeSpace }
         let totalCapacity = disks.reduce(0) { $0 + $1.totalCapacity }
         
         if totalCapacity > 0 {
-            let percentage = Double(totalUsed) / Double(totalCapacity)
+            let percentage = Double(totalFree) / Double(totalCapacity)
             statusItem.button?.title = String(format: "💾 %.0f%%", percentage * 100)
         } else {
             statusItem.button?.title = "💾"
