@@ -151,27 +151,38 @@ class DiskSpaceViewController: NSViewController {
         eulaScrollView.translatesAutoresizingMaskIntoConstraints = false
         
         let eulaText = """
-        END USER LICENSE AGREEMENT (EULA)
-        
+        DRIVEINSPECTOR FREEWARE LICENSE
+
         Copyright (c) 2026 George Karagioules.
         All rights reserved.
-        
+
         1. LICENSE GRANT
-        The developer grants you a personal, non-transferable, non-exclusive license to use the DriveInspector software on your devices in accordance with the terms of this agreement.
-        
-        2. INTELLECTUAL PROPERTY AND OWNERSHIP
-        The developer shall at all times retain ownership of the Software as originally downloaded by you and all subsequent downloads of the Software by you. The Software (and the copyright, and other intellectual property rights of whatever nature in the Software, including any modifications made thereto) are and shall remain the property of George Karagioules.
-        
+        You may download and use DriveInspector free of charge for personal and commercial use.
+
+        2. OWNERSHIP
+        DriveInspector and its original source code, design, and assets remain the property of George Karagioules.
+
         3. RESTRICTIONS
-        You are not permitted to:
-        - Edit, alter, modify, adapt, translate or otherwise change the whole or any part of the Software nor permit the whole or any part of the Software to be combined with or become incorporated in any other software, nor decompile, disassemble or reverse engineer the Software.
-        - Reproduce, copy, distribute, resell or otherwise use the Software for any commercial purpose.
-        
-        4. TERMINATION
-        This EULA agreement is effective from the date you first use the Software and shall continue until terminated. 
-        
-        5. GOVERNING LAW
-        This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of the developer's jurisdiction.
+        You may not modify, reverse-engineer, redistribute, sublicense, rent, lease, resell, or sell DriveInspector or any portion of it without prior written permission from the author.
+
+        4. PRIVACY AND DATA
+        DriveInspector reads local mounted-volume capacity information through macOS system APIs. It does not collect telemetry, send analytics, sync data, or transmit drive information over the network.
+
+        5. WARRANTY DISCLAIMER
+        The software is provided "AS IS", without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, and noninfringement.
+
+        6. LIMITATION OF LIABILITY
+        In no event shall the author be liable for any claim, damages, data loss, business interruption, or other liability arising from use of the software.
+
+        7. TERMINATION
+        This license terminates automatically if you violate its terms. Upon termination, stop using and delete all copies of the software.
+
+        8. GOVERNING LAW
+        This license is governed by the laws of the author's jurisdiction, unless mandatory local law requires otherwise.
+
+        9. CONTACT
+        For licensing inquiries, including modification, redistribution, or resale rights, contact the author through:
+        https://github.com/karagioules/OSX_Drive_Inspector
         """
         
         let textView = NSTextView()

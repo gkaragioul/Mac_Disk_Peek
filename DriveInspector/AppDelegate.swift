@@ -9,7 +9,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var diskMonitor: DiskMonitor!
     var popover: NSPopover!
 
-    private let logger = Logger(subsystem: "com.example.DriveInspector", category: "App")
+    private let logger = Logger(subsystem: "com.karagioules.DriveInspector", category: "App")
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         AppDelegate.shared = self
