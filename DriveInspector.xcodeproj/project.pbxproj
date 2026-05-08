@@ -12,6 +12,7 @@
 		1000002 /* DiskMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000002 /* DiskMonitor.swift */; };
 		1000003 /* DiskSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000003 /* DiskSpaceView.swift */; };
 		1000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2000004 /* Assets.xcassets */; };
+		1000006 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2000007 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2000003 /* DiskSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskSpaceView.swift; sourceTree = "<group>"; };
 		2000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2000005 /* DriveInspector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DriveInspector.entitlements; sourceTree = "<group>"; };
+		2000007 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				5000002 /* DriveInspector */,
+				2000007 /* LICENSE */,
 				5000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1000004 /* Assets.xcassets in Resources */,
+				1000006 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +278,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2026 George Karagioules";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -282,7 +286,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DriveInspector;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karagioules.DriveInspector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -302,7 +306,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2026 George Karagioules";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,7 +314,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DriveInspector;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karagioules.DriveInspector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
