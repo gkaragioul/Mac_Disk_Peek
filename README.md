@@ -2,7 +2,7 @@
   <img src="Logo/DiskSpaceAnalyzerIcon.png" alt="DriveInspector app icon" width="180">
 </p>
 
-<h1 align="center">DriveInspector</h1>
+<h1 align="center">Mac Disk Peek</h1>
 
 <p align="center">
   <strong>Native macOS menu bar drive-space monitoring.</strong><br>
