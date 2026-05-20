@@ -6,10 +6,25 @@ class DiskButton: NSButton {
 }
 
 class DiskSpaceViewController: NSViewController {
+    static let defaultContentSize = NSSize(width: 300, height: 222)
+    
     private let diskMonitor: DiskMonitor
     private var disks: [DiskInfo] = []
     private var stackView: NSStackView!
     private var scrollView: NSScrollView!
+    private(set) var currentContentSize = DiskSpaceViewController.defaultContentSize
+    var contentSizeDidChange: ((NSSize) -> Void)?
+    
+    private enum Layout {
+        static let popoverWidth: CGFloat = 300
+        static let maxPopoverHeight: CGFloat = 600
+        static let verticalPadding: CGFloat = 40
+        static let headerHeight: CGFloat = 18
+        static let diskCardHeight: CGFloat = 92
+        static let diskSpacing: CGFloat = 16
+        static let footerHeight: CGFloat = 40
+        static let emptyStateHeight: CGFloat = 42
+    }
     
     private var aboutView: NSView!
     private var aboutButton: NSButton!
@@ -50,7 +65,7 @@ class DiskSpaceViewController: NSViewController {
         
         stackView = NSStackView()
         stackView.orientation = .vertical
-        stackView.spacing = 16
+        stackView.spacing = Layout.diskSpacing
         stackView.edgeInsets = NSEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         stackView.alignment = .centerX
         stackView.distribution = .fill
@@ -70,7 +85,7 @@ class DiskSpaceViewController: NSViewController {
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.widthAnchor.constraint(equalToConstant: 300)
+            stackView.widthAnchor.constraint(equalToConstant: Layout.popoverWidth)
         ])
     }
     
@@ -127,7 +142,7 @@ class DiskSpaceViewController: NSViewController {
         titleLabel.font = NSFont.systemFont(ofSize: 20, weight: .bold)
         titleLabel.textColor = .labelColor
         
-        let versionLabel = NSTextField(labelWithString: "Version 1.0.0")
+        let versionLabel = NSTextField(labelWithString: "Version 1.0.1")
         versionLabel.font = NSFont.systemFont(ofSize: 11, weight: .medium)
         versionLabel.textColor = .secondaryLabelColor
         
@@ -247,6 +262,14 @@ class DiskSpaceViewController: NSViewController {
         updateUI()
     }
     
+    @discardableResult
+    func prepareForDisplay() -> NSSize {
+        _ = view
+        refreshData()
+        view.layoutSubtreeIfNeeded()
+        return currentContentSize
+    }
+    
     private func updateUI() {
         guard let stackView = stackView else { return }
         
@@ -277,10 +300,6 @@ class DiskSpaceViewController: NSViewController {
             stackView.addArrangedSubview(noDisksLabel)
         }
 
-        // Add flexible spacer
-        let spacer = NSView()
-        stackView.addArrangedSubview(spacer)
-        
         // Footer buttons
         let footerStack = NSStackView()
         footerStack.orientation = .horizontal
@@ -302,10 +321,7 @@ class DiskSpaceViewController: NSViewController {
             footerStack.heightAnchor.constraint(equalToConstant: 40)
         ])
         
-        // Force layout and set preferred size for popover expansion
-        stackView.layoutSubtreeIfNeeded()
-        let fittingSize = stackView.fittingSize
-        self.preferredContentSize = NSSize(width: 300, height: min(600, fittingSize.height))
+        updatePopoverSize()
     }
     
     @objc private func quitApp() {
@@ -401,8 +417,23 @@ class DiskSpaceViewController: NSViewController {
         
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.widthAnchor.constraint(equalToConstant: 260).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant: Layout.diskCardHeight).isActive = true
         
         return containerView
+    }
+    
+    private func updatePopoverSize() {
+        let itemCount = max(disks.count, 1)
+        let itemHeight = disks.isEmpty ? Layout.emptyStateHeight : CGFloat(itemCount) * Layout.diskCardHeight
+        let interItemSpacing = CGFloat(itemCount + 1) * Layout.diskSpacing
+        let contentHeight = Layout.verticalPadding + Layout.headerHeight + itemHeight + interItemSpacing + Layout.footerHeight
+        let targetHeight = min(Layout.maxPopoverHeight, max(DiskSpaceViewController.defaultContentSize.height, contentHeight))
+        let contentSize = NSSize(width: Layout.popoverWidth, height: targetHeight)
+        
+        scrollView.hasVerticalScroller = contentHeight > Layout.maxPopoverHeight
+        currentContentSize = contentSize
+        preferredContentSize = contentSize
+        contentSizeDidChange?(contentSize)
     }
 }
 

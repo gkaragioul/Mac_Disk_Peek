@@ -47,9 +47,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func setupPopover() {
         popover = NSPopover()
-        popover.contentSize = NSSize(width: 300, height: 350)
+        popover.contentSize = DiskSpaceViewController.defaultContentSize
         popover.behavior = .transient
-        popover.contentViewController = DiskSpaceViewController(diskMonitor: diskMonitor)
+        
+        let viewController = DiskSpaceViewController(diskMonitor: diskMonitor)
+        viewController.contentSizeDidChange = { [weak self] contentSize in
+            self?.popover.contentSize = contentSize
+        }
+        popover.contentViewController = viewController
+        popover.contentSize = viewController.prepareForDisplay()
     }
     
     @objc private func togglePopover(_ sender: Any?) {
@@ -59,8 +65,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let button = statusItem.button {
                 // Ensure data is fresh AND view is loaded before showing
                 if let vc = popover.contentViewController as? DiskSpaceViewController {
-                    _ = vc.view // Force view load
-                    vc.refreshData()
+                    popover.contentSize = vc.prepareForDisplay()
                 }
 
                 // Force the app to the front
@@ -70,6 +75,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     guard let self = self else { return }
                     
                     self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+                    
+                    if let vc = self.popover.contentViewController as? DiskSpaceViewController {
+                        self.popover.contentSize = vc.currentContentSize
+                    }
                     
                     // Force the popover window to be key and at the front
                     if let popoverWindow = self.popover.contentViewController?.view.window {

@@ -10,7 +10,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/georgekgr12/Mac_Disk_Peek/releases/latest/download/DriveInspector.zip"><strong>Download latest app</strong></a> &bull;
   <a href="#highlights">Highlights</a> &bull;
+  <a href="#download">Download</a> &bull;
   <a href="#build">Build</a> &bull;
   <a href="#privacy-and-data">Privacy</a> &bull;
   <a href="#license">License</a>
@@ -19,6 +21,14 @@
 ---
 
 DriveInspector is a native macOS menu bar app that monitors mounted drives and gives a quick view of disk availability.
+
+## Download
+
+Download the latest signed app bundle here:
+
+**[Download DriveInspector.zip](https://github.com/georgekgr12/Mac_Disk_Peek/releases/latest/download/DriveInspector.zip)**
+
+That link always points to the newest GitHub release asset named `DriveInspector.zip`.
 
 ## Highlights
 
@@ -31,6 +41,9 @@ DriveInspector is a native macOS menu bar app that monitors mounted drives and g
 
 ## Latest Improvements
 
+- Added a downloadable GitHub release asset with a permanent latest-download link
+- Fixed first-open popover sizing so the window matches the connected drive count immediately
+- Restored the app bundle icon in exported builds
 - Fixed status badge logic to use the startup drive instead of a generic internal disk
 - Switched badge semantics to show free percentage instead of used percentage
 - Added safer capacity math to avoid invalid percentage edge cases
@@ -47,8 +60,8 @@ DriveInspector is a native macOS menu bar app that monitors mounted drives and g
 ### Local Build
 
 ```bash
-git clone https://github.com/karagioules/OSX_Drive_Inspector.git
-cd OSX_Drive_Inspector
+git clone https://github.com/georgekgr12/Mac_Disk_Peek.git
+cd Mac_Disk_Peek
 xcodebuild -project DriveInspector.xcodeproj -scheme DriveInspector -configuration Release build
 ```
 
