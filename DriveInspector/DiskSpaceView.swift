@@ -197,7 +197,7 @@ class DiskSpaceViewController: NSViewController {
 
         9. CONTACT
         For licensing inquiries, including modification, redistribution, or resale rights, contact the author through:
-        https://github.com/karagioules/OSX_Drive_Inspector
+        https://github.com/georgekgr12/Mac_Disk_Peek
         """
         
         let textView = NSTextView()
