@@ -157,7 +157,7 @@ class DiskSpaceViewController: NSViewController {
         separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
         separator.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        let eulaTitle = NSTextField(labelWithString: "End User License Agreement")
+        let eulaTitle = NSTextField(labelWithString: "MIT License")
         eulaTitle.font = NSFont.systemFont(ofSize: 12, weight: .bold)
         
         let eulaScrollView = NSScrollView()
@@ -166,38 +166,19 @@ class DiskSpaceViewController: NSViewController {
         eulaScrollView.translatesAutoresizingMaskIntoConstraints = false
         
         let eulaText = """
-        DRIVEINSPECTOR FREEWARE LICENSE
+        MIT License
 
-        Copyright (c) 2026 George Karagioules.
-        All rights reserved.
+        Copyright (c) 2026 George Karagioules
 
-        1. LICENSE GRANT
-        You may download and use DriveInspector free of charge for personal and commercial use.
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-        2. OWNERSHIP
-        DriveInspector and its original source code, design, and assets remain the property of George Karagioules.
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-        3. RESTRICTIONS
-        You may not modify, reverse-engineer, redistribute, sublicense, rent, lease, resell, or sell DriveInspector or any portion of it without prior written permission from the author.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
-        4. PRIVACY AND DATA
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, DATA LOSS, BUSINESS INTERRUPTION, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
         DriveInspector reads local mounted-volume capacity information through macOS system APIs. It does not collect telemetry, send analytics, sync data, or transmit drive information over the network.
-
-        5. WARRANTY DISCLAIMER
-        The software is provided "AS IS", without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, and noninfringement.
-
-        6. LIMITATION OF LIABILITY
-        In no event shall the author be liable for any claim, damages, data loss, business interruption, or other liability arising from use of the software.
-
-        7. TERMINATION
-        This license terminates automatically if you violate its terms. Upon termination, stop using and delete all copies of the software.
-
-        8. GOVERNING LAW
-        This license is governed by the laws of the author's jurisdiction, unless mandatory local law requires otherwise.
-
-        9. CONTACT
-        For licensing inquiries, including modification, redistribution, or resale rights, contact the author through:
-        https://github.com/georgekgr12/Mac_Disk_Peek
         """
         
         let textView = NSTextView()
