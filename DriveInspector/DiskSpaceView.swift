@@ -142,7 +142,7 @@ class DiskSpaceViewController: NSViewController {
         titleLabel.font = NSFont.systemFont(ofSize: 20, weight: .bold)
         titleLabel.textColor = .labelColor
         
-        let versionLabel = NSTextField(labelWithString: "Version 1.0.1")
+        let versionLabel = NSTextField(labelWithString: "Version 1.0.2")
         versionLabel.font = NSFont.systemFont(ofSize: 11, weight: .medium)
         versionLabel.textColor = .secondaryLabelColor
         
