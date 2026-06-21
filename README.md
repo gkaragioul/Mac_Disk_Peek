@@ -5,7 +5,7 @@
 <h1 align="center">Mac Disk Peek</h1>
 
 <p align="center">
-  <strong>Native macOS menu bar drive-space monitoring.</strong><br>
+  <strong>Open-source macOS menu bar drive-space monitoring.</strong><br>
   <em>See free space at a glance, inspect mounted volumes, and jump straight to Finder.</em>
 </p>
 
@@ -65,7 +65,7 @@ cd Mac_Disk_Peek
 xcodebuild -project DriveInspector.xcodeproj -scheme DriveInspector -configuration Release build
 ```
 
-Build outputs are intentionally excluded from source control. If you redistribute a built copy, include `LICENSE` with the app or installer so users receive the license terms before download or install.
+Build outputs are intentionally excluded from source control. If you redistribute a built copy, include `LICENSE` with the app or installer so users receive the MIT license terms before download or install.
 
 ## Project
 
@@ -80,6 +80,6 @@ DriveInspector reads local mounted-volume capacity information through macOS sys
 
 ## License
 
-DriveInspector is freeware/proprietary software. You may download and use it at no cost, but modification, redistribution, resale, and reverse engineering require prior written permission from the author.
+DriveInspector is open source under the MIT License. You may use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, provided the MIT copyright and permission notice are included in copies or substantial portions of the software.
 
 See [LICENSE](LICENSE) for the full terms.
