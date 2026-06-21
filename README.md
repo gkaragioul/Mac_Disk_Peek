@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/georgekgr12/Mac_Disk_Peek/releases/latest/download/DriveInspector.zip"><strong>Download latest app</strong></a> &bull;
+  <a href="https://github.com/gkaragioul/Mac_Disk_Peek/releases/latest"><strong>Download latest app</strong></a> &bull;
   <a href="#highlights">Highlights</a> &bull;
   <a href="#download">Download</a> &bull;
   <a href="#build">Build</a> &bull;
@@ -26,9 +26,9 @@ DriveInspector is a native macOS menu bar app that monitors mounted drives and g
 
 Download the latest packaged app bundle here:
 
-**[Download DriveInspector.zip](https://github.com/georgekgr12/Mac_Disk_Peek/releases/latest/download/DriveInspector.zip)**
+**[Download DriveInspector.zip](https://github.com/gkaragioul/Mac_Disk_Peek/releases/latest)**
 
-That link always points to the newest GitHub release asset named `DriveInspector.zip`.
+That link always points to the newest GitHub release.
 
 ## Highlights
 
@@ -60,7 +60,7 @@ That link always points to the newest GitHub release asset named `DriveInspector
 ### Local Build
 
 ```bash
-git clone https://github.com/georgekgr12/Mac_Disk_Peek.git
+git clone https://github.com/gkaragioul/Mac_Disk_Peek.git
 cd Mac_Disk_Peek
 xcodebuild -project DriveInspector.xcodeproj -scheme DriveInspector -configuration Release build
 ```
