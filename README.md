@@ -22,14 +22,6 @@
 
 DriveInspector is a native macOS menu bar app that monitors mounted drives and gives a quick view of disk availability.
 
-## Download
-
-Download the latest packaged app bundle here:
-
-**[Download DriveInspector.zip](https://github.com/gkaragioul/Mac_Disk_Peek/releases/latest)**
-
-That link always points to the newest GitHub release.
-
 ## Highlights
 
 - Menu bar badge showing the free percentage for the startup drive
