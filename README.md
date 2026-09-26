@@ -70,6 +70,10 @@ Build outputs are intentionally excluded from source control. If you redistribut
 
 DriveInspector reads local mounted-volume capacity information through macOS system APIs. It does not collect telemetry, send analytics, sync data, or transmit drive information over the network.
 
+## Disclaimer
+
+Mac Disk Peek is provided as is, without warranty of any kind, under the [MIT License](LICENSE). Use it at your own risk; you are responsible for how you use it. It only reads volume capacity information and opens volumes in Finder; it does not modify, move, or delete any files.
+
 ## License
 
 DriveInspector is open source under the MIT License. You may use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, provided the MIT copyright and permission notice are included in copies or substantial portions of the software.
