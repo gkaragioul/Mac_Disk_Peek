@@ -31,6 +31,15 @@ DriveInspector is a native macOS menu bar app that monitors mounted drives and g
 - Lightweight native AppKit UI
 - No telemetry, analytics, account system, or network sync
 
+## Download
+
+Download `MacDiskPeek.zip` from the
+[latest release](https://github.com/gkaragioul/Mac_Disk_Peek/releases/latest),
+unzip it, and move `DriveInspector.app` to your Applications folder. The app is
+ad hoc signed but not Developer ID signed or notarized, so macOS may show an
+unidentified-developer warning on first launch. You can also [build it from
+source](#build).
+
 ## Latest Improvements
 
 - Added a downloadable GitHub release asset with a permanent latest-download link
